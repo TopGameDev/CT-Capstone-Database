@@ -1,0 +1,14 @@
+# Ignore the virtual environment
+venv/
+
+# also ignore the __pycache__
+__pycache__/
+
+# ignore the .vscode (your personal vs code settings
+.vscode/
+
+# hide our environment variables in .env
+.env
+
+# ignore the SQLite Database
+*.db
