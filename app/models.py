@@ -20,7 +20,7 @@ class User(db.Model, UserMixin):
     last_name = db.Column(db.String(50), nullable=False)
     email = db.Column(db.String(75), nullable=False, unique=True)
     username = db.Column(db.String(50), nullable=False, unique=True)
-    password = db.Column(db.String(50), nullable=False, unique=True)
+    password = db.Column(db.String(100), nullable=False, unique=True)
     date_created = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     posts = db.relationship('Post', backref='author', cascade="delete") # The backref is how we create a list inside of another list with the User info (line 88-97)
     token = db.Column(db.String(32), index=True, unique=True)
